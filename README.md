@@ -1,5 +1,5 @@
 # chip
-Our Discord bot lives over here :)
+Our Discord bot will live over here :)
 
 # Like to contribute?
 Awesome! Just a few things we would love to see:
