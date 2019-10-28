@@ -13,6 +13,7 @@ then use `npm start` to start
 ### Support:
 If you need support with getting the bot started you can create a ticket with  Easy Tickets#1884 and ping me in the channel:
 ♛ ᖴᒪᗩᙏᙏᗩᙖᒪᙓᗩSSᗩSSIᑎ® ♛#4701
+
 ---
 
 ### Made by:
