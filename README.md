@@ -18,9 +18,9 @@ Simply make an issue if something in the bot doesn't work, if you figured this o
 
 ### Rewrite by:
 [♛ ᖴᒪᗩᙏᙏᗩᙖᒪᙓᗩSSᗩSSIᑎ® ♛#4701](https://github.com/flamableassassin)
-with help from [PostFarmer#0001](https://github.com/Kinolite)
+with help from [Kinolite#0001](https://github.com/Kinolite)
 
-Original version by [Like#0001](https://github.com/abcdan) and [PostFarmer#0001](https://github.com/Kinolite)
+Original version by [Like#0001](https://github.com/abcdan) and [Kinolite#0001](https://github.com/Kinolite)
 
 # Like to contribute?
 Please ensure you read our rules for contributors, they can change at any given time so try to stay up-to-date with them.
