@@ -4,7 +4,8 @@ module.exports = function(client) {
   client.on("guildMemberRemove", () => checkMembers(client));
   client.on("error", console.error);
   client.on("guildMemberAdd", member => {
-    if (member.guild.id == servers.main_server.id) {
+    const {servers} = require('../config.js');
+    if (member.guild.id == servers.main.id) {
       server_code_together(client,member);
     } else if (member.user.bot) {
       member.guild.createChannel(
@@ -29,6 +30,7 @@ module.exports = function(client) {
 };
 
 function server_code_together(client,member) {
+  const {servers} = require('../config.js');
   checkMembers(client);
   let guild = member.guild;
   let embed = new Discord.RichEmbed()
@@ -44,8 +46,9 @@ function server_code_together(client,member) {
   member.addRole(servers.main.join_role).catch(e => {});
 }
 function checkMembers(client) {
+  const {servers} = require('../config.js');
     let guild = client.guilds.get(servers.main.id);
     let memberCount = guild.members.filter(member => !member.user.bot).size;
 
-    guild.channels.get(dev_count_channel).setName(`Devs: ${memberCount}`);
+    guild.channels.get(servers.main.dev_count_channel).setName(`Devs: ${memberCount}`);
   }
