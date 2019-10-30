@@ -6,13 +6,13 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (var x in commandFiles) {
-  let command = require(`./commands/${commandFiles[x]}`);
-  client.commands.set(command.name, command);
+    let command = require(`./commands/${commandFiles[x]}`);
+    client.commands.set(command.name, command);
 }
 watchers.commands(client);
 if (dev_mode){
-  client.login(tokens.bot.dev)
+    client.login(tokens.bot.dev);
 }else{
-  client.login(tokens.bot.main)
-  watchers.other(client);
+    client.login(tokens.bot.main);
+    watchers.other(client);
 }
