@@ -3,4 +3,5 @@ config.js
 .editorconfig
 .eslintrc.json
 LICENSE
+docs/
 README.md
