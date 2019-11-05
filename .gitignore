@@ -5,3 +5,5 @@ config.js
 LICENSE
 docs/
 README.md
+yarn.lock
+.env

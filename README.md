@@ -1,5 +1,5 @@
 # Chip
-Chip is the discord bot that was made for the discord server [Code Together](https://discord.gg/4uHuFTn)
+Chip is the discord bot that was made for the discord server [code::together](https://discord.gg/4uHuFTn)
 
 ### Setup:
 You require:
@@ -7,7 +7,7 @@ You require:
 - [Node-fetch](https://www.npmjs.com/package/node-fetch)
 
 Steps to setup the bot
-1. Simply rename `example-config.js` to `config.js` and changed the details to your likings.
+1. Simply rename `example.config.js` to `config.js` and changed the details to your likings.
 2. After that, simply do `npm install` to install all the dependencies.
 3. Finally, run the bot via `npm start`
 

@@ -1,10 +1,19 @@
-module.exports = {
-    name: 'help', //how it is called
-    description: 'description', // the description.. 
-    args: false, // if arguments are needed
-    deletemsg: false, //if the bot will delete the command msg
-    response:'', //the response if no arguments
-    execute(msg, args,client) {
-      //Code_Goes_Here
-    },
-};
+const { Command } = require('quartz');
+
+class Name extends Command {
+    constructor (client) {
+        super(client, {
+            name: 'name', // Command Name
+            aliases: ['aliases'], // Command Aliases
+            description: {
+                content: 'description' // Command Description
+            }
+        });
+    }
+
+    async run (msg, args) {
+        // Code goes here
+    } 
+}
+
+module.exports = Name;
