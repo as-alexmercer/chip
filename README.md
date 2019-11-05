@@ -7,7 +7,7 @@ You require:
 - [Node-fetch](https://www.npmjs.com/package/node-fetch)
 
 Steps to setup the bot
-1. Simply rename `example.config.js` to `config.js` and changed the details to your likings.
+1. Simply rename `example.config.js` to `config.js` and change the details to your liking.
 2. After that, simply do `npm install` to install all the dependencies.
 3. Finally, run the bot via `npm start`
 

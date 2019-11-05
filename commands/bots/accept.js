@@ -26,11 +26,11 @@ class Accept extends Command {
 				const embed = this.client.embed()
 						.title('**Invite**')
 						.description(`[URL](${botInviteURL})`)
-						.footer('Channel Deletion: 10 seconds');
+						.footer('Channel Deletion: 1 min');
 				await msg.channel.createMessage({ embed });
 				setTimeout(() => {
 						return msg.channel.delete(`Bot Approved By: ${msg.author.username}`);
-				}, 10000);
+				}, 60000);
 		}
 }
 

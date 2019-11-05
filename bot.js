@@ -9,7 +9,7 @@ const eris = new Client(config.tokens.bot.main || config.tokens.bot.dev, {
     restMode: true
 });
 const client = new QuartzClient({
-    owner: config.dev_id,
+    owner: config.owner_id,
     eventHandler: {
         directory: path.resolve('./events')
     },

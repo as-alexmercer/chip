@@ -1,8 +1,6 @@
 module.exports= {
-    dev_id: 'id', // Used so people can't test the bot when ur coding
-    dev_mode: true, // {bool} used to easily switch between bots
+    owner_id: 'id', // Used so people can't test the bot when ur coding
     prefix: 'prefix_here',
-    msg_to_long: false, // {bool} a bit of code that will delete a msg if it has code blocks in it then put the code in a paste and resends
     tokens: {
     // Can either put your tokens in here or env. remove according
         bot: {
