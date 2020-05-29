@@ -9,7 +9,6 @@
      "lint": "eslint --ext \".js\" ./"
   },
   "author": "a few people",
-  "license": "ISC",
   "dependencies": {
     "eris": "^0.11.2",
     "node-fetch": "^2.6.0"
@@ -19,5 +18,15 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+    "repository": {	  
+    "url": "https://github.com/codedtogether/chip.git"	   
+  },	  
+  "license": "GPL-3.0",	
+  "keywords": [	
+    "chip",	
+    "code::together",	
+    "bot"	
+  ]	
+}
 }
