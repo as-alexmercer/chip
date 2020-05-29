@@ -1,28 +1,22 @@
 {
-  "name": "chip",
-  "version": "0.0.1",
-  "description": "The offical code::together bot.",
-  "main": "app.js",
+  "name": "james",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
   "scripts": {
-    "start": "node bot.js",
-    "lint": "eslint --ext \".js\" ./"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
   },
+  "author": "flammableassassin",
+  "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "eris": "^0.11.0",
-    "node-fetch": "^2.6.0",
-    "quartz": "https://github.com/pointscity/quartz.git"
+    "eris": "^0.11.2",
+    "node-fetch": "^2.6.0"
   },
   "engines": {
     "node": "12.x"
   },
-  "repository": {
-    "url": "https://github.com/codedtogether/chip.git"
-  },
-  "license": "MIT",
-  "keywords": [
-    "chip",
-    "code::together",
-    "bot"
-  ]
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }

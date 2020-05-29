@@ -1,22 +1,21 @@
-require('dotenv').config()
+const {
+    loaders,
+    disabled_events,
+    events
+} = require("./src/index.js")
+const config = require('./config.js');
 
-const { QuartzClient } = require('quartz');
-const { Client } = require('eris');
-const path = require('path');
-const config = require('./config');
-
-const eris = new Client(config.tokens.bot.main || config.tokens.bot.dev, {
-    restMode: true
+const eris = require('eris', {
+    disableEveryone: true,
+    disableEvents: disabled_events(),
+    maxShards: "1"
 });
-const client = new QuartzClient({
-    owner: config.owner_id,
-    eventHandler: {
-        directory: path.resolve('./events')
-    },
-    commandHandler: {
-        directory: path.resolve('./commands'),
-        prefix: config.prefix
-    }
-}, eris);
 
-client.start();
+var token = config.dev_mode ? config.tokens.bot.dev : config.tokens.bot.main
+var client = new eris(token)
+client.config = config
+
+events(client, config)
+loaders(client, config)
+//-------------//
+client.connect();

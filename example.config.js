@@ -1,8 +1,9 @@
-module.exports= {
+module.exports = {
     owner_id: 'id', // Used so people can't test the bot when ur coding
     prefix: 'prefix_here',
+    dev_mode: false, // for chosing what token and other stuff
     tokens: {
-    // Can either put your tokens in here or env. remove according
+        // Can either put your tokens in here or env. remove according
         bot: {
             dev: 'Dev_bot_token' || process.env.DEV_TOKEN,
             main: 'main_bot_token' || process.env.TOKEN
@@ -23,5 +24,6 @@ module.exports= {
             bot_role: 'id', // The role the bot will get when it joins the test server
             bot_testing_category: 'id'
         }
-    }
+    },
+    users:[] // used for who can use the eval command
 };
