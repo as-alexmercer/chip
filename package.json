@@ -1,5 +1,5 @@
 {
-  "name": "james",
+  "name": "chip",
   "version": "1.0.0",
   "description": "",
   "main": "bot.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js"
   },
-  "author": "flammableassassin",
+  "author": "a few people",
   "license": "ISC",
   "dependencies": {
     "eris": "^0.11.2",
