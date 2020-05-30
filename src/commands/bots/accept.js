@@ -11,7 +11,7 @@ module.exports = {
     reason: "reason here!", // reason why its disabled
     staff: true, // staff only
     async execute(msg, args, client, config) {
-        if (msg.channel.guild.id !== client.config.servers.testing.id) return msg.channel.createMessage('Not Testing Server');
+        if (msg.channel.guild.id !== client.config.servers.testing.id) return msg.channel.createMessage('This command can only be used in the testing server (mod only)');
 
         await msg.channel.guild.members.get(msg.channel.topic).kick(`Bot Approved By: ${msg.author.username}`)
             .catch(error => {
