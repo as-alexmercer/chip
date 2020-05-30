@@ -10,7 +10,7 @@ module.exports = {
     aliases: [],
     disabled: false,
     reason: "reason here!", // reason why its disabled
-    developer: false, // dev only
+    staff: false, // staff only
     async execute(msg, args, client) {
         await msg.delete()
         if (!msg.member.roles.includes(client.config.servers.main.required_role_add_bot)) {
