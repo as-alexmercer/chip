@@ -8,7 +8,6 @@ module.exports = async function(client, config) {
     //--command handling--//
     client.on('messageCreate', message => {
         if (message.author.bot) return;
-        if (message.channel.type !== 0) return;
 
         //prefix stuff
         var prefix = config.prefix
