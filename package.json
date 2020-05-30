@@ -1,32 +1,37 @@
 {
-  "name": "chip",
-  "version": "1.0.0",
-  "description": "",
-  "main": "bot.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bot.js",
-     "lint": "eslint --ext \".js\" ./"
-  },
-  "author": "a few people",
-  "dependencies": {
-    "eris": "^0.11.2",
-    "node-fetch": "^2.6.0"
-  },
-  "engines": {
-    "node": "12.x"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  },
-    "repository": {	  
-    "url": "https://github.com/codedtogether/chip.git"	   
-  },	  
-  "license": "GPL-3.0",	
-  "keywords": [	
-    "chip",	
-    "code::together",	
-    "bot"	
-  ]	
-}
+    "name": "chip",
+    "description": "The offical code::together bot.",
+    "main": "bot.js",
+    "license": "GPL-3.0",
+    "version": "1.1.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node bot.js",
+        "lint": "eslint --ext \".js\" ./"
+    },
+    "author": {
+        "A-da-m": "Adаm#2917",
+        "Kinolite": "Kinolite#0001",
+        "flamableassassin": "♛ ᖴᒪᗩᙏᙏᗩᙖᒪᙓᗩSSᗩSSIᑎ® ♛#4701",
+        "abcdan": "Like#0001"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "eris": "^0.11.2",
+        "node-fetch": "^2.6.0"
+    },
+    "engines": {
+        "node": "12.x"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    },
+    "repository": {
+        "url": "https://github.com/codedtogether/chip.git"
+    },
+    "keywords": [
+        "chip",
+        "code::together",
+        "bot"
+    ]
 }
