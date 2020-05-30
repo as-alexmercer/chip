@@ -25,5 +25,5 @@ module.exports = {
             bot_testing_category: 'id'
         }
     },
-    users:[] // used for who can use the eval command
+    staff:[] // used for who can use the staff commands
 };
