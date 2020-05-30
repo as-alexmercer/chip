@@ -22,7 +22,7 @@ module.exports = async function(client, config) {
 
         } else return;
         //args stuff//
-        if (args[0] == "") args.shift()
+        if (args[0] === "") args.shift();
         const commandName = args.shift();
         //checking channel perms to see if the bot can send msg to it//
         if (!message.channel.permissionsOf(client.user.id).has("sendMessages")) return;
@@ -53,10 +53,8 @@ module.exports = async function(client, config) {
         if (command.args && args.length === 0) {
             let reply = `You didn't provide any arguments, ${message.author.mention}!`;
             if (command.usage) reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
-
             return client.createMessage(message.channel.id, reply);
         }
-        console.log("ok");
 
         try {
             let res = command.execute(message, args, client)
