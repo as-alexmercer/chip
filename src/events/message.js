@@ -20,7 +20,7 @@ module.exports = async function(client, config) {
         if (args[0] == "") args.shift()
         const commandName = args.shift();
         //checking channel perms to see if the bot can send msg to it//
-        if (message.channel.permissionsOf(client.user.id).json.sendMessages !== true) return;
+        if (!message.channel.permissionsOf(client.user.id).has("sendMessages")) return;
         //finding command//
         const command = client.commands.get(commandName) ||
             client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
