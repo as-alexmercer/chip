@@ -7,7 +7,7 @@ module.exports = {
     description: 'description',
     args: false,
     usage: "<usage here>",
-    aliases: ['aliases'],
+    aliases: [],
     disabled: false,
     reason: "reason here!", // reason why its disabled
     developer: false, // dev only

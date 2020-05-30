@@ -9,7 +9,7 @@ module.exports = {
     aliases: ['ok'],
     disabled: false,
     reason: "reason here!", // reason why its disabled
-    developer: false, // dev only
+    staff: true, // staff only
     async execute(msg, args, client, config) {
         if (msg.channel.guild.id !== client.config.servers.testing.id) return msg.channel.createMessage('Not Testing Server');
 

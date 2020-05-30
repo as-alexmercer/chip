@@ -8,7 +8,7 @@ module.exports = {
     aliases: [],
     disabled: false,
     reason: "reason here!", // reason why its disabled
-    developer: false, // dev only
+    staff: false, // staff only
     async execute(msg, args, client) {
         await msg.delete()
         let body = {

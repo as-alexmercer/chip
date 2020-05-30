@@ -2,6 +2,7 @@ const {
     Embed,
     logic
 } = require('../../handlers');
+
 module.exports = {
     name: 'eval',
     description: 'description',
@@ -11,11 +12,8 @@ module.exports = {
     aliases: ["e"],
     disabled: false,
     reason: "reason here!",
-    developer: false,
-    nsfw: false,
-    mod_role: false,
+    staff: true, // staff only
     async execute(msg, args, client) {
-        if (!client.config.users.includes(msg.author.id)) return;
         let content = msg.content.split(" ")
         content.shift()
         content = content.join(" ")

@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['tags'],
     disabled: false,
     reason: "reason here!", // reason why its disabled
-    developer: false, // dev only
+    staff: false, // staff only
     async execute(msg, args, client, config) {
         await msg.delete()
         switch (args[0]) {

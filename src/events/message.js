@@ -27,9 +27,9 @@ module.exports = async function(client, config) {
         if (!command) return;
 
         //for dev only commands when in dev_mode//
-        //if (config.dev_mode && message.author.id != config.owner_id) return;
-        // developer command //
-        if (command.developer && message.author.id != config.owner_id) return;
+        if (config.dev_mode && message.author.id != config.owner_id) return;
+        //staff only command
+        if (command.staff && !config.staff.includes(message.author.id)) return;
         // disabled command //
         if (command.disabled && message.author.id != config.owner_id) {
             let reply = `\n\`${command.name}\` has been disabled!`

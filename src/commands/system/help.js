@@ -10,7 +10,7 @@ module.exports = {
     aliases: [],
     disabled: false,
     reason: "reason here!", // reason why its disabled
-    developer: false, // dev only
+    staff: false, // staff only
     execute(msg, args, client, db, config) {
         const embed = new Embed()
             .title(`**What can I help you with?**`)
