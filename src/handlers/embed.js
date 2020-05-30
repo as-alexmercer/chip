@@ -29,7 +29,7 @@ class Embed {
     return this;
   }
 
-  color(color = 9720750) {
+  color(color) {
     this.embed.color = (color[0]==="#") ? parseInt(color.replace("#", ""), 16) : color
     return this;
   }
@@ -56,7 +56,7 @@ class Embed {
   footer(text, url = "") {
     this.embed.footer = {
       "icon_url": url,
-      "text": text
+      "text": footer.toString().substring(0, 2048)
     }
     return this;
   }
