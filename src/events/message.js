@@ -12,10 +12,16 @@ module.exports = async function(client, config) {
 
         //prefix stuff
         var prefix = config.prefix
-        if (message.content.startsWith(prefix)) var args = message.content.slice(prefix.length).toLowerCase().split(/ +/);
-        else if (message.content.startsWith(`<@!${client.user.id}>`)) var args = message.content.slice(`<@!${client.user.id}>`.length).toLowerCase().split(/ +/);
-        else if (message.author.id === config.owner_id && message.content.startsWith(config.owner_prefix)) var args = message.content.slice(config.owner_prefix.length).toLowerCase().split(/ +/);
-        else return;
+        if (message.content.startsWith(prefix)) {
+            var args = message.content.slice(prefix.length).toLowerCase().split(/ +/);
+
+        } else if (message.content.startsWith(`<@!${client.user.id}>`)) {
+            var args = message.content.slice(`<@!${client.user.id}>`.length).toLowerCase().split(/ +/);
+
+        } else if (message.author.id === config.owner_id && message.content.startsWith(config.owner_prefix)) {
+            var args = message.content.slice(config.owner_prefix.length).toLowerCase().split(/ +/);
+
+        } else return;
         //args stuff//
         if (args[0] == "") args.shift()
         const commandName = args.shift();
