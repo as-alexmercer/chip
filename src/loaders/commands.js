@@ -15,5 +15,5 @@ module.exports = function(client, config) {
             client.commands.set(command.name, command);
         }
     }
+    console.log("Finished adding commmands");
 }
-console.log("Finished adding commmands");
