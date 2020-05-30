@@ -6,7 +6,7 @@ module.exports = async function(client, config) {
     //command stuff//
     const cooldowns = new Collection();
     //--command handling--//
-    client.on('messageCreate', message => {
+    client.on('messageCreate', async message => {
         if (message.author.bot) return;
 
         //prefix stuff
@@ -59,10 +59,11 @@ module.exports = async function(client, config) {
         console.log("ok");
 
         try {
-            command.execute(message, args, client);
+            let res = command.execute(message, args, client)
+            if (res instanceof Promise) await res;
         } catch (error) {
             console.error(error);
-            client.createMessage(message.channel.id, 'This shouldn\'t have happened');
+            message.channel.createMessage('This shouldn\'t have happened');
         }
     });
 };
