@@ -9,12 +9,12 @@
         "start": "node bot.js",
         "lint": "eslint --ext \".js\" ./"
     },
-    "author": {
-        "A-da-m": "Adаm#2917",
-        "Kinolite": "Kinolite#0001",
-        "flamableassassin": "♛ ᖴᒪᗩᙏᙏᗩᙖᒪᙓᗩSSᗩSSIᑎ® ♛#4701",
-        "abcdan": "Like#0001"
-    },
+    "author": " Flamableassassin (♛ ᖴᒪᗩᙏᙏᗩᙖᒪᙓᗩSSᗩSSIᑎ® ♛#4701)",
+    "contributors": [
+        "A-da-m (Adаm#2917)",
+        "Kinolite (Kinolite#0001)",
+        "abcdan (Like#0001)"
+    ],
     "dependencies": {
         "dotenv": "^8.2.0",
         "eris": "^0.11.2",
