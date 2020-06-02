@@ -10,7 +10,7 @@ module.exports = function(client, config) {
                 name: `Devs: ${memberCount}`
             });
             const guild = member.guild;
-            const embed = Embed()
+            const embed = new Embed()
                 .color("#ffffff")
                 .title(`Greetings, welcome to ${guild.name}! :tada: :confetti_ball:`)
                 .description('Thank you for joining in our server. Please check our <#572922217478881330> and get yourself some roles via <#609139074514550785>.\nEnjoy your time here!\n**Quick reminder, we only support white-hat hacking. Nothing else!**');
@@ -28,9 +28,9 @@ module.exports = function(client, config) {
     })
 
     client.on("guildMemberRemove", (guild, member) => {
-        const removeGuild = client.guilds.get(servers.main.id);
+        const removeGuild = client.guilds.get(config.servers.main.id);
         const memberCount = removeGuild.members.filter(member => !member.user.bot).length
-        return removeGuild.channels.get(servers.main.dev_count_channel).edit({
+        return removeGuild.channels.get(config.servers.main.dev_count_channel).edit({
             name: `Devs: ${memberCount}`
         });
     })
