@@ -8,14 +8,15 @@ module.exports = async function(client, config) {
     //--command handling--//
     client.on('messageCreate', async message => {
         if (message.author.bot) return;
+        let botMentionTest = message.content.match(new RegExp(`^<@!?${client.user.id}>`, "i"))
 
         //prefix stuff
         var prefix = config.prefix
         if (message.content.startsWith(prefix)) {
             var args = message.content.slice(prefix.length).toLowerCase().split(/ +/);
 
-        } else if (message.content.startsWith(`<@!${client.user.id}>`)) {
-            var args = message.content.slice(`<@!${client.user.id}>`.length).toLowerCase().split(/ +/);
+        } else if (botMentionTest !== null) {
+            var args = message.content.slice(botMentionTest[0].length).toLowerCase().split(/ +/);
 
         } else if (message.author.id === config.owner_id && message.content.startsWith(config.owner_prefix)) {
             var args = message.content.slice(config.owner_prefix.length).toLowerCase().split(/ +/);
