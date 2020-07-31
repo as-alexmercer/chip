@@ -11,8 +11,9 @@ module.exports = {
     aliases: ["e"],
     disabled: false,
     reason: "reason here!",
-    staff: true, // staff only
+    staff: false, // staff only
     async execute(msg, args, client) {
+        if (msg.author.id !== client.config.owner_id) return;
         let set_async = false
         let depth = 0
         let content = msg.content.split(" ")
@@ -51,10 +52,9 @@ module.exports = {
                 });
             }
             if (res) {
-                res = res.replace(new RegExp(client.ip, "g"), "127.0.0.1")
+                res = res.replace(new RegExp(client.config.tokens.paste, "g"), "-- Redacted ---")
                     .replace(new RegExp(client.config.tokens.bot.main, "g"), "-- Redacted ---")
                     .replace(new RegExp(client.config.tokens.bot.dev, "g"), "-- Redacted ---")
-                    .replace(new RegExp(client.config.tokens.paste, "g"), "-- Redacted ---")
             }
 
             const embed = new Embed()
