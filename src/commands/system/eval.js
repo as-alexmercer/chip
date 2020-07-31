@@ -1,5 +1,4 @@
 const {
-    Embed,
     logic
 } = require('../../handlers');
 module.exports = {
@@ -57,7 +56,7 @@ module.exports = {
                     .replace(new RegExp(client.config.tokens.bot.dev, "g"), "-- Redacted ---")
             }
 
-            const embed = new Embed()
+            const embed = new client.Embed()
                 .color(error ? "#ff0000" : "#00ff00")
                 .title("Result")
                 .description(`Time: ${logic.nano(time)}`)

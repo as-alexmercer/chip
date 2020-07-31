@@ -1,6 +1,3 @@
-const {
-    Embed
-} = require('../../handlers');
 module.exports = {
     name: 'accept',
     description: 'Accept a bot.',
@@ -18,7 +15,7 @@ module.exports = {
                 return msg.channel.createMessage(`**Unable to kick bot**\nError: ${error.message}`);
             });
         const botInviteURL = `https://discordapp.com/oauth2/authorize?client_id=${msg.channel.topic}&scope=bot&permissions=0&guild_id=${client.config.servers.main.id}`;
-        const embed = new Embed()
+        const embed = new client.Embed()
             .title('**Invite**')
             .description(`[URL](${botInviteURL})`)
             .footer('Channel Deletion: 1 min');

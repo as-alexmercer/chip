@@ -1,7 +1,3 @@
-const {
-    Embed
-} = require('../../handlers');
-
 module.exports = {
     name: 'add',
     description: 'description',
@@ -34,7 +30,7 @@ module.exports = {
                         return msg.channel.createMessage('Invalid usage: Bot ID/mention not found.');
                     }
                     const botInviteURL = `https://discordapp.com/oauth2/authorize?client_id=${bot.id}&scope=bot&permissions=0&guild_id=${client.config.servers.testing.id}`;
-                    const embed = new Embed()
+                    const embed = new client.Embed()
                         .title(`**${bot.username}#${bot.discriminator} - Bot Submitted**`)
                         .description(`[Invite URL](${botInviteURL})\nOwner: \`${msg.author.username}#${msg.author.discriminator}\`\nPrefix: \`${args[1]}\``)
                         .thumbnail(bot.displayAvatarURL);
