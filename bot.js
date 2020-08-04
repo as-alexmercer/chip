@@ -1,8 +1,5 @@
 require('dotenv').config()
-const {
-    loaders,
-    events
-} = require("./src/index.js")
+const loaders = require("./src")
 const config = require('./config.js');
 
 const eris = require('eris', {
@@ -38,7 +35,6 @@ var token = config.dev_mode ? config.tokens.bot.dev : config.tokens.bot.main
 var client = new eris(token)
 client.config = config
 
-events(client, config)
 loaders(client, config)
 //-------------//
 client.connect();

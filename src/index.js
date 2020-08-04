@@ -1,4 +1,1 @@
-module.exports = {
-  events: require("./events"),
-  loaders: require("./loaders")
-}
+module.exports = require("./loaders")

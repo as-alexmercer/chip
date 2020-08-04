@@ -1,7 +1,3 @@
-const {
-    Embed
-} = require("../../handlers")
-
 module.exports = {
     name: 'help',
     description: 'its help',
@@ -12,7 +8,7 @@ module.exports = {
     reason: "reason here!", // reason why its disabled
     staff: false, // staff only
     execute(msg, args, client, db, config) {
-        const embed = new Embed()
+        const embed = new client.Embed()
             .title(`**What can I help you with?**`)
             .author(msg.author.username, msg.author.avatarURL)
             .addField('**Commands**', '!add (bot ID) (prefix)\n!tag [tag]\n!paste (code)', true)

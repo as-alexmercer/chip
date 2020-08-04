@@ -8,21 +8,22 @@ module.exports = async function(client, config) {
     //--command handling--//
     client.on('messageCreate', async message => {
         if (message.author.bot) return;
+        let botMentionTest = message.content.match(new RegExp(`^<@!?${client.user.id}>`, "i"));
 
         //prefix stuff
-        var prefix = config.prefix
+        var prefix = config.prefix;
+        var args;
+
         if (message.content.startsWith(prefix)) {
-            var args = message.content.slice(prefix.length).toLowerCase().split(/ +/);
-
-        } else if (message.content.startsWith(`<@!${client.user.id}>`)) {
-            var args = message.content.slice(`<@!${client.user.id}>`.length).toLowerCase().split(/ +/);
-
+            args = message.content.slice(prefix.length);
+        } else if (botMentionTest !== null) {
+            args = message.content.slice(botMentionTest[0].length);
         } else if (message.author.id === config.owner_id && message.content.startsWith(config.owner_prefix)) {
-            var args = message.content.slice(config.owner_prefix.length).toLowerCase().split(/ +/);
-
+            args = message.content.slice(config.owner_prefix.length);
         } else return;
+
         //args stuff//
-        if (args[0] === "") args.shift();
+        args = args.trim().toLowerCase().split(/ +/);
         const commandName = args.shift();
         //checking channel perms to see if the bot can send msg to it//
         if (!message.channel.permissionsOf(client.user.id).has("sendMessages")) return;
@@ -37,13 +38,13 @@ module.exports = async function(client, config) {
         if (command.staff && !config.staff.includes(message.author.id)) return;
         // disabled command //
         if (command.disabled && message.author.id != config.owner_id) {
-            let reply = `\n\`${command.name}\` has been disabled!`
+            let reply = `\n\`${command.name}\` has been disabled!`;
             if (command.reason) {
-                reply += `\nReason: \`${command.reason}\``
+                reply += `\nReason: \`${command.reason}\``;
             }
             client.createMessage(message.channel.id, reply).then((msg) => {
                 setTimeout(function() {
-                    msg.delete()
+                    msg.delete();
                 }, 7500);
             })
             return;
@@ -57,7 +58,7 @@ module.exports = async function(client, config) {
         }
 
         try {
-            let res = command.execute(message, args, client)
+            let res = command.execute(message, args, client);
             if (res instanceof Promise) await res;
         } catch (error) {
             console.error(error);
