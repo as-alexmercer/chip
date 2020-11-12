@@ -19,8 +19,8 @@ const eris = require('eris', {
     // - MESSAGE_DELETE_BULK
 });
 
-var token = config.dev_mode ? config.tokens.bot.dev : config.tokens.bot.main
-var client = new eris(token)
+let token = config.dev_mode ? config.tokens.bot.dev : config.tokens.bot.main
+let client = new eris(token)
 client.config = config
 
 loaders(client, config)
