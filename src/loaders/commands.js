@@ -9,7 +9,7 @@ module.exports = function(client, config) {
     //--adding commands--//
 
     for (folder of dirs) {
-        var sub_folder = fs.readdirSync(`./src/commands/${folder}`).filter(file => file.endsWith('.js'))
+        let sub_folder = fs.readdirSync(`./src/commands/${folder}`).filter(file => file.endsWith('.js'))
         for (files of sub_folder) {
             let command = require(`../commands/${folder}/${files}`);
             client.commands.set(command.name, command);
