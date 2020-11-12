@@ -10,4 +10,28 @@ module.exports = function(client, config) {
     if (config.dev_mode) {
         client.on("debug", (msg) => console.info(`Debug: ` + msg))
     }
+
+    process.on('exit', () => {
+        client.disconnect({
+            reconnect: false
+        })
+    });
+
+    process.on('SIGINT', () => {
+        client.disconnect({
+            reconnect: false
+        })
+    });
+
+    process.on('SIGUSR1', () => {
+        client.disconnect({
+            reconnect: false
+        })
+    });
+
+    process.on('SIGUSR2', () => {
+        client.disconnect({
+            reconnect: false
+        })
+    });
 }
