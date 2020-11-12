@@ -1,5 +1,7 @@
 config.js
 /node_modules/
+.yarn
+.pnp.js
 .editorconfig
 .eslintrc.json
 LICENSE
