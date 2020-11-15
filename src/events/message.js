@@ -11,8 +11,8 @@ module.exports = async function(client, config) {
         let botMentionTest = message.content.match(new RegExp(`^<@!?${client.user.id}>`, "i"));
 
         //prefix stuff
-        var prefix = config.prefix;
-        var args;
+        let prefix = config.prefix;
+        let args;
 
         if (message.content.startsWith(prefix)) {
             args = message.content.slice(prefix.length);
