@@ -22,16 +22,4 @@ module.exports = function(client, config) {
             reconnect: false
         })
     });
-
-    process.on('SIGUSR1', () => {
-        client.disconnect({
-            reconnect: false
-        })
-    });
-
-    process.on('SIGUSR2', () => {
-        client.disconnect({
-            reconnect: false
-        })
-    });
 }
